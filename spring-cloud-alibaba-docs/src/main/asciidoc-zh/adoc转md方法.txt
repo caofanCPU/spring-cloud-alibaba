@@ -1,0 +1,6 @@
+brew install asciidoc
+brew install pandoc
+
+
+asciidoc -b docbook acm.adoc
+iconv -t utf-8 acm.xml | pandoc -f docbook -t markdown_strict --wrap=none | iconv -f utf-8 > acm.md
