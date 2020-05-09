@@ -103,9 +103,13 @@ Nacos Config 除了支持 properties 格式以外，也支持 yaml 格式。这�
 1、在应用的 bootstrap.properties 配置文件中显示的声明 DataId 文件扩展名。如下所示
 
 .bootstrap.properties
-[source,yaml]
+[source, yaml, indent=0]
 ----
-spring.cloud.nacos.config.file-extension=yaml
+spring:
+  cloud:
+    nacos:
+    config:
+      file-extension: yaml
 ----
 
 2、在 Nacos 的控制台新增一个DataId为yaml为扩展名的配置，如下所示：
